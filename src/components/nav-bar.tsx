@@ -13,7 +13,11 @@ type Link = {
   isExternal?: boolean;
 };
 
-export function Navbar({ isOpen, className }) {
+type NavbarProps = {
+  isOpen: boolean;
+  className: string;
+};
+export function Navbar({ isOpen, className }: NavbarProps) {
   const links: Link[] = [
     {
       name: "About Me",

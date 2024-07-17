@@ -1,5 +1,5 @@
 import { Link } from "react-router-dom";
-import { useEffect, useRef, useState } from "react";
+import { useEffect, useState } from "react";
 import emailjs from "@emailjs/browser";
 import { PUBLIC_KEY } from "../../../config.ts";
 
@@ -98,7 +98,7 @@ export function ContactForm() {
           value={form.message}
           onChange={(e) => setForm({ ...form, message: e.target.value })}
           className="outline-none focus:outline-violet-800 outline-offset-1 rounded bg-inherit border px-5 py-2 w-full placeholder-neutral-600"
-          rows="10"
+          rows={10}
           placeholder="Mensaje"
         ></textarea>
         <button

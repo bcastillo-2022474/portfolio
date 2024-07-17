@@ -6,7 +6,7 @@ type Project = {
   title: string;
   description: string;
   github: string;
-  img: object;
+  img: string;
 };
 
 export function ProjectsSection() {
@@ -18,7 +18,7 @@ export function ProjectsSection() {
         " que permite a los usuarios realizar transacciones, consultar su saldo y más." +
         "Se creo con la intención de ser un backend robusto, contamos con tests",
       github: "https://github.com/kinal-team-1/bank-app-backend",
-      img: imgBank,
+      img: imgBank as string,
     },
     {
       title: "DAEM API",
@@ -29,7 +29,7 @@ export function ProjectsSection() {
         " el abuso infantil al ofrecer una plataforma para denunciar incidentes, tanto públicamente como" +
         " de forma anónima, manteniendo la privacidad del usuario y la seguridad de los datos.",
       github: "https://github.com/kinal-team-1/DAEM-backend/",
-      img: imgDaem,
+      img: imgDaem as string,
     },
     {
       title: "Blog Kinal",
@@ -39,7 +39,7 @@ export function ProjectsSection() {
         ", que es mi colegio técnico de programación.El propósito principal de este blog es explicar mis proyectos" +
         "a fondo, planeo actualizarlo en un futuro",
       github: "https://github.com/bcastillo-2022474/blog-kinal-tareas",
-      img: imgBlog,
+      img: imgBlog as string,
     },
   ];
 
