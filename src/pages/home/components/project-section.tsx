@@ -46,7 +46,10 @@ export function ProjectsSection() {
   return (
     <section id="projects" className="flex flex-col gap-3">
       <div className="flex justify-between pe-10 items-center">
-        <h2 className="text-5xl">Mis Proyectos</h2>
+        <a href="#projects" className="text-5xl flex gap-2 hover:text-white/50">
+          <span className="text-gray-700">#</span>
+          <span>Mis Proyectos</span>
+        </a>
         <span className="text-xs bg-orange-400/30 border-orange-500 border-2 text-orange-500 py-1 px-2 rounded-full flex items-center justify-center">
           Aun en desarrollo!
         </span>

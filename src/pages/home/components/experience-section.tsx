@@ -52,8 +52,11 @@ export function ExperienceSection() {
   ];
 
   return (
-    <section className="py-5 flex flex-col gap-5">
-      <h2 className="text-5xl">Experience</h2>
+    <section id="experience" className="py-5 flex flex-col gap-5">
+      <a href="#experience" className="text-5xl flex gap-2 hover:text-white/50">
+        <span className="text-gray-700">#</span>
+        <span>Experience</span>
+      </a>
       <div className="flex flex-col px-5 md:px-0 md:grid grid-cols-2 gap-5 md:gap-10 justify-center">
         <article className="flex flex-col gap-10">
           <h3 className="text-3xl underline text-violet-400">Work</h3>

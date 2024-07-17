@@ -2,6 +2,8 @@ import { Link } from "react-router-dom";
 import { useEffect, useState } from "react";
 import emailjs from "@emailjs/browser";
 import { PUBLIC_KEY } from "../../../config.ts";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { faCheck, faSpinner, faTimes } from "@fortawesome/free-solid-svg-icons";
 
 const serviceId = "service_y54jrim";
 const templateId = "template_c6b3t2p";
@@ -25,7 +27,7 @@ export function ContactForm() {
     if (status === "success" || status === "error") {
       setTimeout(() => {
         setStatus("idle");
-      }, 3000);
+      }, 5000);
     }
   }, [status]);
 
@@ -43,7 +45,10 @@ export function ContactForm() {
 
   return (
     <section id="contact" className="flex flex-col gap-4">
-      <h2 className="text-5xl">Contacto</h2>
+      <a href="#contact" className="text-5xl flex gap-2 hover:text-white/50">
+        <span className="text-gray-700">#</span>
+        <span>Contacto</span>
+      </a>
       <p className="flex flex-wrap gap-1">
         Puedes contactarme a través de mis redes sociales o enviandome un correo
         electronico a
@@ -103,12 +108,27 @@ export function ContactForm() {
         ></textarea>
         <button
           type="submit"
-          className="mt-3 w-full bg-violet-950 cursor-pointer px-5 py-2 rounded outline-none hover:bg-violet-900"
+          className="mt-3 w-full bg-violet-950 cursor-pointer px-5 py-2 rounded outline-none hover:bg-violet-900 flex gap-2 justify-center items-center"
         >
           {status === "idle" && <span>Enviar</span>}
-          {status === "loading" && <span>Enviando</span>}
-          {status === "success" && <span>Enviado</span>}
-          {status === "error" && <span>Error</span>}
+          {status === "loading" && (
+            <>
+              <span>Enviando</span>
+              <FontAwesomeIcon icon={faSpinner} className="animate-spin" />
+            </>
+          )}
+          {status === "success" && (
+            <>
+              <span>Enviado</span>
+              <FontAwesomeIcon icon={faCheck} />
+            </>
+          )}
+          {status === "error" && (
+            <>
+              <span>Error</span>
+              <FontAwesomeIcon icon={faTimes} />
+            </>
+          )}
         </button>
       </form>
     </section>

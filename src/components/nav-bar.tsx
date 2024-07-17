@@ -20,11 +20,15 @@ type NavbarProps = {
 export function Navbar({ isOpen, className }: NavbarProps) {
   const links: Link[] = [
     {
-      name: "About Me",
+      name: "Sobre mí",
       url: "/#about-me",
     },
     {
-      name: "Projects",
+      name: "Experiencia",
+      url: "/#experience",
+    },
+    {
+      name: "Proyectos",
       url: "/#projects",
     },
     {
@@ -32,7 +36,7 @@ export function Navbar({ isOpen, className }: NavbarProps) {
       url: "/#skills",
     },
     {
-      name: "Contact",
+      name: "Contacto",
       url: "/#contact",
     },
     {
