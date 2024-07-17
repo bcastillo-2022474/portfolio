@@ -35,7 +35,7 @@ export function MainSection() {
           Soy Joao Castillo, un desarrollador web de 18 años con 1.5 años de
           experiencia. Especializado en Frontend con Angular, React y Next.
           También sé de SQL y tengo conocimientos en backend con Express y
-          Prisma. Aunque domino Java, mi fuerte es el desarrollo web.
+          Prisma. Aunque domino Java, mi fuerte es el desarrollo web con JS/TS.
         </p>
       </article>
       <article className="flex overflow-x-scroll gap-5">

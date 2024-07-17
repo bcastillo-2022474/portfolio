@@ -18,7 +18,7 @@ export function ExperienceSection() {
     },
     {
       title: "Junior Web Developer",
-      subtitle: "Nabenik | Guatemala | Marzo 2023 - Octubre 2022",
+      subtitle: "Nabenik | Guatemala | Febrero 2022 - Octubre 2022",
       description:
         "Implementé diseños UI/UX para transformar esquemas y mockups en páginas web funcionales." +
         " Colaboré en la construcción de componentes reutilizables en Angular para mejorar la eficiencia" +
