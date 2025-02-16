@@ -49,7 +49,7 @@ export function ExperienceSection() {
     },
     {
       title: "Frontend Masters Courses",
-      subtitle: "Frontend Masters | Noviembre 2021 - Presente",
+      subtitle: "Frontend Masters | Noviembre 2022 - Presente",
       description:
         "Multiples Cursos de desarrollo web en Frontend Masters. Aprendizaje de tecnologías modernas como React, NodeJS" +
         "RxJs, etc. Aprendizaje de funcionamiento de Node Event Loop, Closures, Promises, Async/Await, Generators, etc." +
