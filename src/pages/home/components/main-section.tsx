@@ -40,7 +40,7 @@ export function MainSection() {
           Soy Joao Castillo, Desarrollador Full Stack, con +2 años de experiencia
           en desarrollo web. Me especializo en Frontend, con experiencia en tecnologías
           como Next.js, Express, Python (Django) y SQL. Formado en Kinal, donde
-          completé una carrera intensiva en desarrollo de software, y actualmente
+          completé una carrera intensiva en desarrollo de software, actualmente
           estudio en UVG.
         </p>
         <p>

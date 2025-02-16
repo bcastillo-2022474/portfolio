@@ -47,6 +47,20 @@ export function ExperienceSection() {
       description:
         "Licenciatura en Ciencias de la Computación y Tecnologías de la Información con enfoque en el desarrollo de software, sistemas y tecnologías emergentes.",
     },
+    {
+      title: "Frontend Masters Courses",
+      subtitle: "Frontend Masters | Noviembre 2021 - Presente",
+      description:
+        "Multiples Cursos de desarrollo web en Frontend Masters. Aprendizaje de tecnologías modernas como React, NodeJS" +
+        "RxJs, etc. Aprendizaje de funcionamiento de Node Event Loop, Closures, Promises, Async/Await, Generators, etc." +
+        " Conceptos de programación funcional, Desarrollo Accesible, etc.",
+    },
+    {
+      title: "The Complete Javascript Course (70 horas)",
+      subtitle: "Udemy | Octubre 2021 - Agosto 2022",
+      description:
+        "Curso completo de Javascript con 70 horas de contenido. Adquisición de habilidades prácticas en el desarrollo web.",
+    },
   ];
 
   return (
