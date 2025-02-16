@@ -1,45 +1,48 @@
-import imgDaem from "../../../assets/stats-DAEM.png";
 import imgBank from "../../../assets/stats-bank-app.png";
 import imgBlog from "../../../assets/blog-kinal.png";
+import imgYubi from "../../../assets/yubi.jpg";
 
 type Project = {
   title: string;
   description: string;
-  github: string;
+  github?: string;
   img: string;
+  link?: string;
+  badges?: string[];
 };
 
 export function ProjectsSection() {
   const projects: Project[] = [
     {
-      title: "Banking App API",
+      title: "Yubi",
       description:
-        "API desarrollada por mi y compañeros de clase liderada por mi, esta pensada para un sistema bancario" +
-        " que permite a los usuarios realizar transacciones, consultar su saldo y más." +
-        "Se creo con la intención de ser un backend robusto, contamos con tests",
-      github: "https://github.com/kinal-team-1/bank-app-backend",
-      img: imgBank as string,
-    },
-    {
-      title: "DAEM API",
-      description:
-        "Este repo contiene una API de Denuncias de Explotación" +
-        " Infantil. Proporciona una API robusta para gestionar informes de casos públicos y anónimos," +
-        " autenticación de usuarios y adjuntos de archivos. La aplicación tiene como objetivo combatir" +
-        " el abuso infantil al ofrecer una plataforma para denunciar incidentes, tanto públicamente como" +
-        " de forma anónima, manteniendo la privacidad del usuario y la seguridad de los datos.",
-      github: "https://github.com/kinal-team-1/DAEM-backend/",
-      img: imgDaem as string,
+        "Yubi es una aplicacion que busca ser la plataforma que conecte a guatemaltecos con emprendimientos locales. " +
+        "Tiene la capacidad de crear y calendarizar eventos para promocionar negocios. Forme parte del equipo que" +
+        "desarrollo esta aplicacion, mi rol fue de Full Stack Developer, aporte al backend y frontend de la aplicacion",
+      link: "https://yubi.lat",
+      img: imgYubi as string,
+      badges: ["Next.js", "Express", "Hexagonal Architecture"],
     },
     {
       title: "Blog Kinal",
       description:
-        "Este blog pensando para publicar acerca de proyectos hechos, se puede ver y comentar en mis " +
-        "publicaciones. Por el momento, solo publico descripciones acerca de mis proyectos en Kinal" +
-        ", que es mi colegio técnico de programación.El propósito principal de este blog es explicar mis proyectos" +
-        "a fondo, planeo actualizarlo en un futuro",
+        "Este blog pensando para publicar acerca de proyectos hechos en kinal, se puede ver y comentar en mis " +
+        "publicaciones. Esta es una pequeña tarea que me dejaron en " +
+        "mi colegio técnico, Kinal. Planeo actualizarlo en un futuro",
       github: "https://github.com/bcastillo-2022474/blog-kinal-tareas",
+      link: "https://joao-blog-kinal.netlify.app/",
       img: imgBlog as string,
+      badges: ["React", "Node.js", "MongoDB"],
+    },
+    {
+      title: "Banking App API",
+      description:
+        "API desarrollada por mi y compañeros de clase liderada por mi, esta pensada para un sistema bancario" +
+        " que permite a los usuarios realizar transacciones, consultar su saldo y más. " +
+        "Se creo con la intención de ser un backend empresarial robusto",
+      github: "https://github.com/kinal-team-1/bank-app-backend",
+      img: imgBank as string,
+      badges: ["React", "Node.js", "MongoDB"],
     },
   ];
 
@@ -50,26 +53,30 @@ export function ProjectsSection() {
           <span className="text-gray-700">#</span>
           <span>Mis Proyectos</span>
         </a>
-        <span className="text-xs bg-orange-400/30 border-orange-500 border-2 text-orange-500 py-1 px-2 rounded-full flex items-center justify-center">
-          Aun en desarrollo!
-        </span>
       </div>
-      <ul className="flex flex-col gap-2">
+      <ul className="flex flex-wrap gap-10">
         {projects.map((project) => (
-          <li className="flex flex-col gap-2">
+          <li className="bg-main-dark/50 flex flex-col gap-2 md:w-[400px] cursor-pointer transition ease-in-out hover:scale-[102%]">
             <a
-              href={project.github}
-              className="flex flex-col sm:flex-row p-3 gap-3 items-center cursor-pointer transition ease-in-out hover:scale-[102%]"
+              target="_blank"
+              href={project.link || project.github}
+              className="flex flex-col gap-3 items-center rounded shadow-2xl p-6 h-full"
             >
               <img
-                className="border w-[200px] h-[150px] shrink-0"
+                className="shrink-0 object-contain rounded h-[200px]"
                 src={project.img}
                 alt={project.title}
               />
               {/*<span className="border w-[200px] h-[150px] shrink-0"></span>*/}
               <p className="shrink">{project.description}</p>
+              <div className="flex gap-2 w-full">
+                {project.badges?.map((badge) => (
+                  <span className="bg-violet-900/50 text-white px-2 py-1 rounded text-ellipsis">
+                    {badge}
+                  </span>
+                ))}
+              </div>
             </a>
-            <hr />
           </li>
         ))}
       </ul>

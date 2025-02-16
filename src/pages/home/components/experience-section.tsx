@@ -2,52 +2,50 @@ export function ExperienceSection() {
   const works = [
     {
       title: "Full Stack Web Developer",
-      subtitle: "Darapti | Guatemala | Abril 2024 - Actualidad",
+      subtitle: "Edoo | Guatemala | Agosto 2024 - Actualidad",
       description:
-        "En Darapti, Estoy completando mis practicas  de nivel medio, " +
-        " desarrollo tanto en el backend como en el frontend. He tenido la experiencia de" +
-        " poder trabajar con NextJS, PostgreSQL, y una arquitectura hexagonal",
+        "Lidero el desarrollo del frontend para el módulo de finanzas de Edoo, un sistema de gestión de aprendizaje (LMS). Colaboro estrechamente con el equipo backend para implementar nuevas funcionalidades, asegurando la integración. También apoyo en el desarrollo backend utilizando Django y aplicando principios de arquitectura hexagonal.",
     },
     {
-      title: "Developer Junior Flutter",
-      subtitle: "Logistika | Guatemala | Diciembre 2023 - Marzo-2024",
+      title: "Full Stack Web Developer",
+      subtitle: "Darapti | Guatemala | Abril 2024 - Actualidad",
       description:
-        "Trabajo en una empresa que ofrece servicios de contabilidad y manejo de bodegas. Resuelvo" +
-        " transacciones SQL y verifico la integridad de la data. Colaboro en el desarrollo de soluciones" +
-        " tecnológicas para mejorar los procesos internos.",
+        "Desarrollo de endpoints backend robustos utilizando TypeScript en un monorepo con múltiples aplicaciones backend y frontend. Creo interfaces de usuario modernas con NextJS, siguiendo las mejores prácticas de desarrollo web. Participo activamente en la implementación de una arquitectura hexagonal para mejorar la estructura y mantenibilidad del código.",
+    },
+    {
+      title: "Freelance Web Developer",
+      subtitle: "E689 | Guatemala | Enero 2024 - Actualidad",
+      description:
+        "Desarrollo aplicaciones frontend y backend trabajando de cerca con un desarrollador senior. Implemento soluciones serverless utilizando AWS Lambda, DynamoDB y otros servicios de AWS, aplicando las mejores prácticas en desarrollo cloud y arquitecturas serverless.",
+    },
+    {
+      title: "Junior Flutter and Backend Developer",
+      subtitle: "Logistika 360 | Guatemala | Noviembre 2023 - Marzo 2024",
+      description:
+        "Contribuí en la migración de una aplicación de escritorio a móvil usando Flutter. Optimicé bases de datos mediante modificaciones en procedimientos almacenados y gestioné irregularidades en los datos. Además, participé en la conciliación de datos entre SAP y el sistema interno de la empresa.",
     },
     {
       title: "Junior Web Developer",
-      subtitle: "Nabenik | Guatemala | Febrero 2022 - Octubre 2022",
+      subtitle: "Nabenik | Guatemala | Febrero 2023 - Octubre 2023",
       description:
-        "Implementé diseños UI/UX para transformar esquemas y mockups en páginas web funcionales." +
-        " Colaboré en la construcción de componentes reutilizables en Angular para mejorar la eficiencia" +
-        " del código y acelerar el desarrollo. Demostré habilidades en Typescript, utilizando su tipado" +
-        " estático para escribir un código Front-end sólido y fácil de mantener.",
+        "Implementé diseños UI/UX transformando esquemas y mockups en páginas web funcionales. Desarrollé componentes reutilizables en Angular y colaboré en la optimización del rendimiento de aplicaciones web.",
     },
   ];
 
   const educations = [
     {
-      title: "Perito en Informatica",
+      title: "Perito en Informática",
       subtitle:
-        "Centro Educativo Tecnico Laboral KINAL | Guatemala Zona 7 | Enero 2022 - Presente",
+        "Centro Educativo Tecnico Laboral KINAL | Guatemala Zona 7 | Enero 2022 - Octubre 2024",
       description:
         "Carrera técnica orientada a la práctica y preparación para el campo laboral. Especialización en programación en Java y SQL, con enfoque en aplicaciones de escritorio utilizando JavaFX y Java Swing.",
     },
     {
-      title: "Frontend Masters Courses",
-      subtitle: "Frontend Masters | Noviembre 2021 - Presente",
+      title: "Ingeniería en Ciencias de la Computación",
+      subtitle:
+        "Universidad del Valle de Guatemala | Guatemala Zona 16 | 2025 - 2030",
       description:
-        "Multiples Cursos de desarrollo web en Frontend Masters. Aprendizaje de tecnologías modernas como React, NodeJS" +
-        "RxJs, etc. Aprendizaje de funcionamiento de Node Event Loop, Closures, Promises, Async/Await, Generators, etc." +
-        " Conceptos de programación funcional, Desarrollo Accesible, etc.",
-    },
-    {
-      title: "The Complete Javascript Course (70 horas)",
-      subtitle: "Udemy | Octubre 2021 - Agosto 2022",
-      description:
-        "Curso completo de Javascript con 70 horas de contenido. Adquisición de habilidades prácticas en el desarrollo web.",
+        "Licenciatura en Ciencias de la Computación y Tecnologías de la Información con enfoque en el desarrollo de software, sistemas y tecnologías emergentes.",
     },
   ];
 

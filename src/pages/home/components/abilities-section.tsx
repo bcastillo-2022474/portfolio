@@ -1,44 +1,46 @@
-import { AngularLogo } from "../../../components/icons/angular-logo.tsx";
-import { ReactLogo } from "../../../components/icons/react-logo.tsx";
-import { GithubLogo } from "../../../components/icons/github-logo.tsx";
-import { JavaLogo } from "../../../components/icons/java-logo.tsx";
-import { MongodbLogo } from "../../../components/icons/mongodb-logo.tsx";
-import { NodejsLogo } from "../../../components/icons/nodejs-logo.tsx";
-import { GitLogo } from "../../../components/icons/git-logo.tsx";
-import { PostgresqlLogo } from "../../../components/icons/postgresql-logo.tsx";
-
-export function HabilitiesSection() {
-  const logos = [
-    <AngularLogo />,
-    <ReactLogo />,
-    <NodejsLogo />,
-    <JavaLogo />,
-    <MongodbLogo />,
-    <PostgresqlLogo />,
-    <GitLogo />,
-    <GithubLogo />,
+export function AbilitiesSection() {
+  const cards = [
+    {
+      title: "Frontend",
+      skills: ["React", "Angular", "Next.js", "TailwindCSS"],
+    },
+    {
+      title: "Backend",
+      skills: ["Node.js", "Express", "Java", "Spring Boot", "Django"],
+    },
+    {
+      title: "Bases de Datos",
+      skills: ["MongoDB", "PostgreSQL", "MySQL"],
+    },
+    {
+      title: "Otras",
+      skills: ["Git", "GitHub", "Docker", "Heroku"],
+    },
   ];
-
   return (
     <section id="skills" className="flex flex-col gap-4">
       <a href="#skills" className="text-5xl flex gap-2 hover:text-white/50">
         <span className="text-gray-700">#</span>
         <span>Habilidades</span>
       </a>
-      <p>
-        Cuento con experiencia en desarrollo frontend y backend, trabajando con tecnologías como Java, Java Swing,
-        JavaFX, JSPs, SQL, JavaScript, React, Express y Flutter. Me especializo en la creación de interfaces funcionales
-        y responsivas, optimización de bases de datos y resolución de problemas en SQL. He trabajado en la conversión de
-        mockups a UI interactivas y en el desarrollo de soluciones eficientes y escalables. Además, tengo experiencia
-        laboral como desarrollador junior y freelancer, lo que me ha permitido fortalecer mis habilidades y adaptarme a
-        diferentes proyectos y entornos de trabajo. Siempre estoy en búsqueda de aprender nuevas tecnologías y mejorar
-        mis capacidades técnicas.
-      </p>
-      <ul className="flex gap-3 flex-wrap justify-center py-5">
-        {logos.map((icon) => {
-          return <i className="text-4xl">{icon}</i>;
+      <div className="flex gap-5 flex-wrap">
+        {cards.map(({ title, skills }) => {
+          return (
+            <div className="shadow-2xl w-[350px] shrink-0 rounded-lg p-7 bg-main-dark flex flex-col gap-3">
+              <h2 className="text-2xl">{title}</h2>
+              <ul className="flex gap-2 flex-wrap">
+                {skills.map((badge) => {
+                  return (
+                    <li className="bg-main text-white px-2 py-1 rounded">
+                      {badge}
+                    </li>
+                  );
+                })}
+              </ul>
+            </div>
+          );
         })}
-      </ul>
+      </div>
     </section>
   );
 }

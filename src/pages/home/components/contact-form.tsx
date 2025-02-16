@@ -1,4 +1,3 @@
-import { Link } from "react-router-dom";
 import { useEffect, useState } from "react";
 import emailjs from "@emailjs/browser";
 import { PUBLIC_KEY } from "../../../config.ts";
@@ -13,7 +12,7 @@ export function ContactForm() {
     name: "",
     email: "",
     subject: "",
-    message: "",
+    message: ""
   });
   const [status, setStatus] = useState<
     "idle" | "loading" | "success" | "error"
@@ -39,7 +38,7 @@ export function ContactForm() {
       name: "",
       email: "",
       subject: "",
-      message: "",
+      message: ""
     });
   }, [status === "success"]);
 
@@ -49,13 +48,14 @@ export function ContactForm() {
         <span className="text-gray-700">#</span>
         <span>Contacto</span>
       </a>
-      <p className="flex flex-wrap gap-1">
-        Puedes contactarme a través de mis redes sociales o enviandome un correo
-        electronico a
-        <Link to="" className="text-violet-500 cursor-pointer hover:underline">
+      <p className="">
+        {
+          "Puedes contactarme a través de mis redes sociales o enviandome un correo electronico a "
+        }
+        <span className="text-violet-500 cursor-pointer hover:underline">
           brandonjoaocastillo83@gmail.com
-        </Link>
-        o usando el siguiente formulario:
+        </span>
+        {" o usando el siguiente formulario:"}
       </p>
       <form
         onSubmit={async (e) => {
